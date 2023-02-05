@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>app.apple</groupId>
+  <groupId>apple.app</groupId>
   <artifactId>applemusic</artifactId>
   <version>4.0-SNAPSHOT</version>
 
@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <exec.mainClass>hacks/app.apple.MainDriver</exec.mainClass>
+    <exec.mainClass>hacks/apple.app.MainDriver</exec.mainClass>
     <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
     <exec.args>-Dprism.order=sw</exec.args>
   </properties>
