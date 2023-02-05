@@ -45,6 +45,7 @@ public class SmartGrid extends GridPane {
     ProgressBar progressbar = null;
     HashMap<Integer, VBox> nodeMap = new HashMap<>(); // store index position in grid to access and remove easier
     String spotifyResults = "";
+    Converter barUpdate; // reference object of Converter class's bar
 
     HttpResponse<String> response;
 
@@ -143,7 +144,6 @@ public class SmartGrid extends GridPane {
                     alert.setHeaderText("Here is the music link:");
                     alert.setContentText(applelink);
                     Button copyButton = new Button("Copy Link!");
-
                     copyButton.setOnAction(e -> {
                         Clipboard clipboard = Clipboard.getSystemClipboard();
                         ClipboardContent clipboardContent = new ClipboardContent();
@@ -224,10 +224,8 @@ public class SmartGrid extends GridPane {
 //                Runnable task = () -> progressbar.setProgress(finalCount /9);
             }
             if (results.size() == 0) {
-
             }
             addContents(results);
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } //try-catch
@@ -258,4 +256,5 @@ public class SmartGrid extends GridPane {
         };
         Platform.runLater(errorTask);
     } // errorMessage
-}
+
+} // SmartGrid

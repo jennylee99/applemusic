@@ -55,7 +55,7 @@ public class Converter extends Application {
     SmartGrid smartGrid;
     HBox progressbox;
     Label progressLabel;
-    ProgressBar progressbar;
+    ProgressBar bar;
     ScrollPane scroll;
     Label message;
 
@@ -72,9 +72,9 @@ public class Converter extends Application {
         menu.setPadding(new Insets(8, 8, 2, 8));
         smartGrid = new SmartGrid();
         progressbox = new HBox();
-        progressbar = new ProgressBar();
-        progressLabel = new Label("Images provided by Itunes");
-        message = new Label("Type in a term, then click the button");
+        bar = new ProgressBar();
+        progressLabel = new Label("Sources provided by iTunes Search API");
+        message = new Label("Type in a term, then click the button!");
 
         AnchorPane.setTopAnchor(vbox, 0d);
         AnchorPane.setLeftAnchor(vbox, 0d);
@@ -100,7 +100,7 @@ public class Converter extends Application {
         //searchLabel.setTextAlignment(TextAlignment.CENTER);
         searchLabel.setMinSize(searchLabel.getMinWidth(), searchLabel.getMinHeight() + 25);
         searchLabel.setAlignment(Pos.BASELINE_CENTER);
-        searchbar = new TextField("Type term(s), then click button!");
+        searchbar = new TextField("Type term(s), then click the button!");
         searchbar.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -126,7 +126,7 @@ public class Converter extends Application {
         menu.getChildren().addAll(searchLabel, searchbar, streamingService, convert);
         vbox.getChildren().addAll(menu);
         vbox.getChildren().addAll(smartGrid);
-        progressbox.getChildren().addAll(progressbar, progressLabel);
+        progressbox.getChildren().addAll(bar, progressLabel);
         vbox.getChildren().addAll(progressbox);
         anchor.getChildren().add(vbox);
 

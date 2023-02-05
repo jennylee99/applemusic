@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <exec.mainClass>hacks/apple.app.MainDriver</exec.mainClass>
+    <exec.mainClass>hacks/apple.app.ConverterDriver</exec.mainClass>
     <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
     <exec.args>-Dprism.order=sw</exec.args>
   </properties>
